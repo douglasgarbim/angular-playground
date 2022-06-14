@@ -1,10 +1,18 @@
 @import '/src/assets/sass/variables/variables';
 
 :host {
+  position: absolute;
+
+  width: 100%;
+
+  bottom: 0;
+
   footer {
     height: $footer-height;
 
     background: white;
+
+    border-top: 1px solid #ccc;
 
     display: flex;
     justify-content: center;
