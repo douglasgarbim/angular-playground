@@ -1,0 +1,17 @@
+@import '/src/assets/sass/variables/variables';
+
+$header-footer-height: calc(#{$header-height} + #{$footer-height});
+
+:host {
+  .content-wrapper {
+    &__router-outlet {
+      min-height: calc(100vh - #{$header-footer-height} - 2px);
+      min-width: 100%;
+
+      background-color: #ecf0f1;
+
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

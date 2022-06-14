@@ -1,0 +1,17 @@
+@import '/src/assets/sass/variables/variables';
+
+:host {
+  footer {
+    height: $footer-height;
+
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
