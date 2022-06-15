@@ -6,6 +6,10 @@
 
     &__router-outlet {
       padding: 40px 0;
+
+      @media (max-width: 579px) {
+        padding: 40px;
+      }
     }
   }
 }

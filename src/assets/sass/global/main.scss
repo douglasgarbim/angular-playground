@@ -2,3 +2,16 @@ html, body {
   text-align: justify;
   background-color: #f1f2f6;
 }
+
+.container,
+.row,
+.col,
+[class*="col-"] {
+  @media (max-width: 579px) {
+    margin-left: 0;
+    margin-right: 0;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

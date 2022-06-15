@@ -1,14 +1,14 @@
 :host {
-  .tasks-list {
-    &__rules {
-      ul {
-        list-style: decimal;
+  .items-list {
+    list-style: decimal;
 
-        li {
-          ul {
-            list-style: decimal;
-          }
-        }
+    padding-left: 28px;
+
+    li {
+      line-height: 1.5;
+
+      &::marker {
+        font-weight: 500;
       }
     }
   }

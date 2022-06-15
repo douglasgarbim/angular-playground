@@ -78,4 +78,38 @@ export class TasksListComponent {
       ]
     }
   ];
+
+  orientations = [
+    {
+      id: 1,
+      desc: 'Deverão ser criados, no mínimo, 2 componentes: um para a listagem dos repositórios e outro para a listagem das informações do repositório, cada um apontando para sua respectiva rota (módulo de roteamento já implementado em "src/app/config/router").'
+    },
+    {
+      id: 2,
+      desc: 'Para a escrita do HTML deverá ser utilizada a metodologia BEM (Block-Element-Modifier).'
+    },
+    {
+      id: 3,
+      desc: 'Para a escrita de estilos dos componentes deverá ser utilizado, preferencialmente, o SCSS, mas também é permitido o uso do CSS puro.'
+    },
+    {
+      id: 4,
+      desc: 'Para as chamadas de API deverá ser criada a estrutura de state/actions/effects/reducers/selectors para gerenciar as requests e salvar os dados na store do NgRx.'
+    }
+  ];
+
+  resources = [
+    {
+      id: 1,
+      desc: 'Documentação da API do Github: https://docs.github.com/pt/rest'
+    },
+    {
+      id: 2,
+      desc: 'Explicação/exemplo de implementação de uma request GET gerenciada por state/actions/effects/reducers/selectors: https://wikicorp.telefonica.com.br/pages/viewpage.action?pageId=226122928'
+    },
+    {
+      id: 3,
+      desc: 'Metodologia BEM: http://getbem.com/introduction/'
+    }
+  ];
 }
