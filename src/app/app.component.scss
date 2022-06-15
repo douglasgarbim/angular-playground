@@ -1,5 +1,9 @@
 :host {
   .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
     &__router-outlet {
       padding: 40px 0;
     }

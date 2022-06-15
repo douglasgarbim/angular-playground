@@ -1,14 +1,13 @@
 :host {
   .tasks-list {
-    &__activities {
+    &__rules {
       ul {
+        list-style: decimal;
+
         li {
-          padding: 12px;
-
-          border: 1px solid #ccc;
-          border-radius: 4px;
-
-          background: white;
+          ul {
+            list-style: decimal;
+          }
         }
       }
     }

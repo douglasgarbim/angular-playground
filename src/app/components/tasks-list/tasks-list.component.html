@@ -1,29 +1,49 @@
 <section class="tasks-list d-flex flex-column align-items-center">
-  <h1 class="font-medium mb-2">
-    Angular Playground - Projeto de introdução
-  </h1>
-  <h3 class="font-regular">
-    Lista de tarefas a serem implementadas:
-  </h3>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="font-medium mb-2">
+        Angular Playground - Projeto de introdução
+      </h1>
+      <h3 class="font-regular">
+        O objetivo deste projeto é propor desafios para introduzir o dev à stack de tecnologias utilizadas no desenvolvimento front-end como Angular, TypeScript, RxJS, NgRx, SASS e Bootstrap e exercitar o desenvolvimento de soluções.
+      </h3>
+    </div>
+  </div>
 
-  <article class="tasks-list__activities mt-4 w-50">
-    <ul class="w-100">
-      <li class="mb-2">
-        <input class="me-3" type="checkbox" name="task" id="task">
-        <label for="task">Atividade 1</label>
-      </li>
-      <li class="mb-2">
-        <input class="me-3" type="checkbox" name="task" id="task">
-        <label for="task">Atividade 1</label>
-      </li>
-      <li class="mb-2">
-        <input class="me-3" type="checkbox" name="task" id="task">
-        <label for="task">Atividade 1</label>
-      </li>
-      <li class="mb-2">
-        <input class="me-3" type="checkbox" name="task" id="task">
-        <label for="task">Atividade 1</label>
-      </li>
-    </ul>
-  </article>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <div class="tasks-list__description">
+        <p class="font-medium mb-2">Descrição do desafio:</p>
+
+        <p>O desafio consiste em criar uma página que consulte a API do Github para listar todos os repositórios públicos da globo.com e, ao clicar em um repositório, listar algumas informações do repositório como nº de stars, forks e lista de commits.</p>
+
+        <p class="font-medium mb-2 mt-2">Regras para o desenvolvimento:</p>
+        <div class="tasks-list__rules">
+          <ng-container *ngTemplateOutlet="devRules; context: { $implicit: rules }"></ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="tasks-list__orientations">
+        <p class="font-medium mb-2">Orientações:</p>
+
+        <ul>
+          <li>Deverão ser criados, no mínimo, 2 componentes: um para a listagem dos repositórios e outro para a listagem das informações do repositório, cada um apontando para sua respectiva rota (módulo de roteamento já implementado em "src/app/config/router")</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
+
+<ng-template #devRules let-rules>
+  <ul>
+    <li *ngFor="let rule of rules">
+      {{ rule.desc }}
+
+      <ng-container *ngIf="rule.sub">
+        <ng-container *ngTemplateOutlet="devRules; context: { $implicit: rule.sub }"></ng-container>
+      </ng-container>
+    </li>
+  </ul>
+</ng-template>
