@@ -95,6 +95,10 @@ export class TasksListComponent {
     {
       id: 4,
       desc: 'Para as chamadas de API deverá ser criada a estrutura de state/actions/effects/reducers/selectors para gerenciar as requests e salvar os dados na store do NgRx.'
+    },
+    {
+      id: 5,
+      desc: 'Deverão ser escritos testes unitários para os novos componentes criados.'
     }
   ];
 
