@@ -113,7 +113,11 @@ export class TasksListComponent {
     },
     {
       id: 3,
-      desc: 'Metodologia BEM: http://getbem.com/introduction/'
+      desc: 'Metodologia BEM: http://getbem.com/introduction'
+    },
+    {
+      id: 4,
+      desc: 'Github globo.com: https://github.com/globocom'
     }
   ];
 }
